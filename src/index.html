@@ -7,9 +7,45 @@
     <title>Document</title>
     <link rel="stylesheet" href="./../dist/style.css">
 </head>
-<body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+<body class="bg-very_dark_blue font-overpass">
+    <div class="container flex justify-center items-center mx-auto h-screen">
+        <div class="bg-dark_blue flex flex-col p-6 rounded-[24px] w-[400px]">
+            <div class="bg-medium_grey h-10 w-10 flex justify-center items-center rounded-full">
+                <div>
+                    <img src="./../images/icon-star.svg" alt="">
+                </div>
+            </div>
+            <h2 class="text-white my-2 font-bold">How did we do?</h2>
+            <p class="text-[15px] text-light_grey my-2">Please let us know how we did with your support request. All feedback is appreciated 
+                to help us improve our offering!</p>
+            <div class="my-2">
+                <ul class="navbar flex flex-row justify-between">
+                    <li class="item text-[15px] font-bold py-2 bg-medium_grey text-white rounded-full w-10 h-10 text-center hover:bg-primary cursor-pointer">1</li>
+                    <li class="item text-[15px] font-bold py-2 bg-medium_grey text-white rounded-full w-10 h-10 text-center hover:bg-primary cursor-pointer">2</li>
+                    <li class="item text-[15px] font-bold py-2 bg-medium_grey text-white rounded-full w-10 h-10 text-center hover:bg-primary cursor-pointer">3</li>
+                    <li class="item text-[15px] font-bold py-2 bg-medium_grey text-white rounded-full w-10 h-10 text-center hover:bg-primary cursor-pointer">4</li>
+                    <li class="item text-[15px] font-bold py-2 bg-medium_grey text-white rounded-full w-10 h-10 text-center hover:bg-primary cursor-pointer">5</li>
+                </ul>
+            </div>
+            <button class="bg-primary rounded-3xl p-2 cursor-pointer mt-2 text-base text-white active:text-primary active:bg-white">Submit</button>
+        </div>
+    </div>
+    <script>
+        let items = document.getElementsByClassName('item');
+        for(let i=0; i<items.length; i++){
+            items[i].addEventListener('click', select)
+        }
+        function select(){
+            if(this.classList.contains("bg-medium_grey")){
+                this.classList.remove("bg-medium_grey")
+                this.classList.add("bg-light_grey")
+            }else{
+                this.classList.remove("bg-medium_grey")
+                this.classList.add("bg-light_grey")
+            }
+            // this.classList.remove("bg-medium_grey")
+            // this.classList.add("bg-light_grey")
+        }
+    </script>
 </body>
 </html>
